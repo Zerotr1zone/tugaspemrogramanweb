@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi Saya</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Halaman Selamat Datang (Welcome Page) -->
+    <div id="welcome-page" class="welcome-container">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Selamat datang!</h1>
+            <p class="welcome-text">dihalaman profil saya</p>
+            <div class="welcome-icon">👋</div>
+            <p class="welcome-description">
+                Terima kasih telah berkunjung kewebsite yang pemula buat. 
+                Klik tombol "Lanjut" untuk melihat profil saya.
+            </p>
+            <button onclick="goToProfile()" class="btn-welcome" id="btn-lanjut">
+                Lanjut 
+            </button>
+        </div>
+    </div>
+
+    <!-- Halaman Profil (Hidden by default) -->
+    <div id="profile-page" class="container" style="display: none;">
+        <!-- Judul Halaman -->
+        <h1 id="main-title" title="Halaman Profil Pribadi">Profil Pribadi Saya</h1>
+        
+        <!-- Gambar Profil -->
+        <!-- Catatan: Ganti "images/profile.jpg" dengan path gambar Anda -->
+        <img src="presiden.jpeg" 
+             alt="Foto Profil" 
+             width="200" 
+             height="200" 
+             class="profile-img"
+             title="Foto Profil Saya">
+        
+        <!-- Paragraf Identitas -->
+        <h2>Tentang Saya</h2>
+        
+        <!-- Paragraf 1: Nama -->
+        <p class="info-paragraph" id="nama-lengkap">
+            <strong>Nama Lengkap:</strong> Moh. Salman Fais
+        </p>
+        
+        <!-- Paragraf 2: NIM -->
+        <p class="info-paragraph" id="nim-mahasiswa">
+            <strong>NIM:</strong> 246270047
+        </p>
+        
+        <!-- Paragraf 3: Hobi -->
+        <p class="info-paragraph" id="hobi-utama" title="Hobi favorit saya">
+            <strong>Hobi:</strong> Bulu tangkis dan catur
+        </p>
+        
+        <!-- Tabel Biodata -->
+        <h2>Biodata Lengkap</h2>
+        <table id="tabel-biodata" class="biodata-table" title="Tabel Biodata Pribadi">
+            <tr>
+                <th>Keterangan</th>
+                <th>Informasi</th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>Moh. Salman Fais</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>19 Juli 2003</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Jl. Sungai Miu No.25 Palu barat, Sulawesi Tengah</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>fullpower615@gmail.com</td>
+            </tr>
+        </table>
+        
+        <!-- Daftar Hobi (Unordered List) -->
+        <h2>Daftar Hobi lainnya</h2>
+        <ul id="daftar-hobi" class="list-hobi" title="Hobi-hobi saya">
+            <li>Membaca</li>
+            <li>Bermain game</li>
+            <li>Menulis</li>
+            <li>Ngoding</li>
+            <li>Memancing</li>
+        </ul>
+        
+        <!-- Daftar Aktivitas Favorit (Ordered List) -->
+        <h2>Aktivitas Favorit (Berurutan)</h2>
+        <ol id="aktivitas-favorit" class="list-aktivitas" title="Urutan aktivitas favorit">
+            <li>Mendaki gunung</li>
+            <li>Mendengarkan musik sambil membaca</li>
+            <li>Memperbudak AI</li>
+            <li>Menonton film Sejarah</li>
+            <li>Diskusi</li>
+        </ol>
+        
+        <!-- Form Sederhana -->
+        <h2>Formulir Kontak</h2>
+        <form id="form-kontak" class="contact-form" title="Formulir untuk menghubungi saya">
+            <!-- Input Nama -->
+            <div class="form-group">
+                <label for="input-nama">Nama:</label>
+                <input type="text" id="input-nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="input-nama">password</label>
+                <input type="password" id="input-nama" name="nama" placeholder="Masukkan password Anda" required>
+            </div>
+
+            <!-- Input Email -->
+            <div class="form-group">
+                <label for="input-email">Email:</label>
+                <input type="email" id="input-email" name="email" placeholder="contoh@email.com" required>
+            </div>
+            
+            <!-- Radio Button Jenis Kelamin -->
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
+                    <label for="laki-laki" style="display: inline; margin-right: 15px;">Laki-laki</label>
+                    
+                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
+                    <label for="perempuan" style="display: inline;">Perempuan</label>
+                </div>
+            </div>
+            
+            <!-- Checkbox Hobi -->
+            <div class="form-group">
+                <label>Hobi (pilih yang sesuai):</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hobi-membaca" name="hobi" value="membaca">
+                    <label for="hobi-membaca" style="display: inline;">Membaca</label><br>
+                    
+                    <input type="checkbox" id="hobi-olahraga" name="hobi" value="olahraga">
+                    <label for="hobi-olahraga" style="display: inline;">Olahraga</label><br>
+                    
+                    <input type="checkbox" id="hobi-mancing" name="hobi" value="mancing">
+                    <label for="hobi-mancing" style="display: inline;">mancing</label><br>
+                    
+                    <input type="checkbox" id="hobi-traveling" name="hobi" value="traveling">
+                    <label for="hobi-traveling" style="display: inline;">Traveling</label><br>
+                    
+                    <input type="checkbox" id="hobi-gaming" name="hobi" value="gaming">
+                    <label for="hobi-gaming" style="display: inline;">Gaming</label>
+                </div>
+            </div>
+            
+            <!-- Tombol Submit -->
+            <button type="submit" id="btn-submit" title="Klik untuk mengirim formulir">Submit</button>
+        </form>
+
+        <!-- Tombol Kembali ke Halaman Awal -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button onclick="backToWelcome()" class="btn-back">
+                ← Kembali ke Halaman Awal
+            </button>
+        </div>
+    </div>
+    
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

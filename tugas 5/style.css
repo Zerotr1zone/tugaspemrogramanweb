@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-size:contain;
+    background-image: url("tolakjudol.jpg");
+    background-position:center;
+    color: #333;
+
+}
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 4%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gambarprofil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header h1 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+.bio {
+    color: #000000;
+    font-weight: 500;
+    max-width: 400px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #696969;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link-button i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+.link-button.instagram {
+    border-left: 4px solid #e1306c;
+}
+
+.link-button.youtube {
+    border-left: 4px solid #1da1f2;
+}
+
+.link-button.tiktok {
+    border-left: 4px solid #e1306c;
+}
+
+.link-button.facebook {
+    border-left: 4px solid #1da1f2;
+}
+.link-button.maps {
+    border-left: 4px solid #1da1f2;
+}
+.link-button.github {
+    border-left: 4px solid #e1306c;
+}
+
+.link-button img.logo {
+    width: 16px; 
+    height: auto;
+    margin-right: 5px; 
+}
+
+.link-button.instagram:hover {
+    background-color: #e1306c;
+    color: white;
+}
+
+.link-button.youtube:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.link-button.tiktok:hover {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.link-button.facebook:hover {
+    background-color: #1877f2;
+    color: white;
+}
+.link-button.maps:hover {
+    background-color: #1877f2;
+    color: white;
+}
+.link-button.github:hover{
+    background-color: #86143e;
+    color:#ffffff
+}
+footer {
+    text-align: center;
+    color: #000000;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+    }
+
+    .link-button {
+        padding: 12px;
+    }
+}
